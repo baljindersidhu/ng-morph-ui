@@ -1,8 +1,10 @@
 .container{
     font-size: 1.85vh;
     height: 100vh;
-    background-image: linear-gradient(135deg, #303f46, #151b1e);
     font-family: 'Exo 2', sans-serif;
+    background-image: linear-gradient(135deg, #303f46, #151b1e);
+    animation: home-smooth-reveal 2s ease-out;
+    animation-fill-mode: forwards;
 
     .Brand{
         color: var(--app-primary-color);
@@ -25,12 +27,16 @@
     .Morph{
         box-shadow: none;
         animation: morph-objects-smooth 1s ease-out;
-        animation-delay: 0.35s;
+        animation-delay: 2s;
         animation-fill-mode: forwards;
         &:first-child{
             padding: 3vh;
             left: -42vw;
             top: 5vh;
+
+            img{
+                height: 35vh;
+            }
         }
 
         &:nth-child(2){
@@ -52,7 +58,7 @@
         }
 
         &:nth-child(5){
-            padding: 28vh;
+            // padding: 28vh;
             left: 35vw;
             top: 42vh;
         }
@@ -83,4 +89,9 @@
     100% {
         transform: translateY(0vh);
     }
+}
+
+@keyframes home-smooth-reveal{
+    from{opacity: 0;}
+    to{opacity: 1;}
 }

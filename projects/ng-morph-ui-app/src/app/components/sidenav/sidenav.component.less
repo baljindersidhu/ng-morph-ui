@@ -1,7 +1,8 @@
 .Container{
-    min-height: 92vh;
+    height: 100%;
     padding: 4vh 0.75vw;
     background-color: var(--sidenav-bg-color);
+    animation: sidenav-smooth-intro 0.35s ease-out;
 
     .Brand::before{
         content: '';
@@ -25,4 +26,10 @@
             background-color: var(--sidenav-link-active-bg-color);
         }
     }
+
+}
+
+@keyframes sidenav-smooth-intro{
+    from{transform: translateX(-18vw);}
+    to{transform: translateX(0vw);}
 }

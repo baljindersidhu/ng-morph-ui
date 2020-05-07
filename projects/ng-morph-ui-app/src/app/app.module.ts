@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { HandbookComponent } from './components/handbook/handbook.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { HandbookWelcomePageComponent } from './components/handbook-welcome-page/handbook-welcome-page.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
 	declarations: [
@@ -16,6 +17,7 @@ import { HandbookWelcomePageComponent } from './components/handbook-welcome-page
 		HandbookComponent,
 		SidenavComponent,
 		HandbookWelcomePageComponent,
+		FooterComponent,
 	],
 	imports: [
 		BrowserModule,

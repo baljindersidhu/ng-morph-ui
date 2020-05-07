@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 body{
+    
     margin: 0;
     font-family: 'Titillium Web', sans-serif;
 
@@ -10,6 +11,16 @@ body{
     --sidenav-bg-color: #f7f8f9;
     --sidenav-link-active-bg-color: #e1e7ec;
 
+    --heading-font-size: 2.25vh;
+    --footer-font-color: #999;
+
+    &.theme.orange{
+        --app-primary-color: orange;
+    }
+
+    &.theme.red{
+        --app-primary-color: #fd4684;
+    }
 }
 
 .Row{
@@ -70,6 +81,10 @@ body{
         text-align: center;
     }
 
+    &.Justify{
+        text-align: justify;
+    }
+
     &.Uppercase{
         text-transform: uppercase;
     }
@@ -126,6 +141,10 @@ body{
         margin-bottom: 5vh;
     }
 
+    &.Bottom7x{
+        margin-bottom: 7vh;
+    }
+
     &.Bottom15x{
         margin-bottom: 15vh;
     }
@@ -148,8 +167,36 @@ body{
         padding-left: 12vw;
     }
 
+    &.Top2x{
+        padding-top: 2vh;
+    }
+
+    &.Top7x{
+        padding-top: 7vh;
+    }
+
     &.Top12x{
         padding-top: 12vh;
+    }
+
+    &.Bottom1x{
+        padding-bottom: 1vh;
+    }
+
+    &.Bottom2x{
+        padding-bottom: 2vh;
+    }
+
+    &.Bottom4x{
+        padding-bottom: 4vh;
+    }
+
+    &.Bottom7x{
+        padding-bottom: 7vh;
+    }
+
+    &.Bottom10x{
+        padding-bottom: 10vh;
     }
 }
 
@@ -163,6 +210,11 @@ body{
     &:hover{
         &.Underline{
             .Text.Underline;
+        }
+
+        &.FadeOut{
+            transition: opacity 0.35s linear;
+            opacity: 0.7;
         }
     }
 }
@@ -190,5 +242,48 @@ body{
 
     &.HiddenY{
         overflow-y: hidden;
+    }
+}
+
+.Display{
+    &.InlineBlock{
+        display: inline-block;
+    }
+}
+
+.Section{
+    .Heading{
+        .Display.InlineBlock;
+        .Position.Relative;
+        font-weight: 600;
+        font-size: var(--heading-font-size);
+        padding: 1vh 0vw;
+
+        &:hover::before{
+            .Position.Absolute;
+            content: '#';
+            font-family: inherit;
+            font-size: inherit;
+            left: -1.25vw;
+            color: var(--app-primary-color);
+            font-weight: normal;
+        }
+
+        a{
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
+    .Content{
+        width: 50vw;
+    }
+
+    .Cover{
+        width: 50vw;
+
+        img{
+            width: 100%;
+        }
     }
 }
