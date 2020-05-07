@@ -1,0 +1,86 @@
+.container{
+    font-size: 1.85vh;
+    height: 100vh;
+    background-image: linear-gradient(135deg, #303f46, #151b1e);
+    font-family: 'Exo 2', sans-serif;
+
+    .Brand{
+        color: var(--app-primary-color);
+    }
+
+    .WelcomeText{
+        color: white;
+        font-weight: bold;
+        width: 40vw;
+        line-height: 9vh;
+    }
+
+    .FooterText{
+        color: white;
+        opacity: 0.3;
+        text-transform: initial;
+        animation: bounce-footer-slow 3s linear infinite;
+    }
+
+    .Morph{
+        box-shadow: none;
+        animation: morph-objects-smooth 1s ease-out;
+        animation-delay: 0.35s;
+        animation-fill-mode: forwards;
+        &:first-child{
+            padding: 3vh;
+            left: -42vw;
+            top: 5vh;
+        }
+
+        &:nth-child(2){
+            padding: 7vh;
+            left: 28vw;
+            top: 4vh;
+        }
+
+        &:nth-child(3){
+            padding: 2.5vh;
+            left: 28vw;
+            top: 22vh;
+        }
+
+        &:nth-child(4){
+            padding: 2.5vh;
+            left: 33vw;
+            top: 22vh;
+        }
+
+        &:nth-child(5){
+            padding: 28vh;
+            left: 35vw;
+            top: 42vh;
+        }
+
+        &:nth-child(6){
+            padding: 3.5vh 6vw;
+            left: -6.25vw;
+            top: 33.5vh;
+        }
+
+    }
+}
+
+@keyframes morph-objects-smooth{
+    from{box-shadow: none;}
+    to{box-shadow: var(--morph-box-shadow);}
+}
+
+@keyframes bounce-footer-slow{
+    0% {
+        transform: translateY(0vh);
+    }
+
+    50% {
+        transform: translateY(0.5vh);
+    }
+
+    100% {
+        transform: translateY(0vh);
+    }
+}

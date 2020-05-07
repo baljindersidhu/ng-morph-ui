@@ -1,0 +1,28 @@
+.Container{
+    min-height: 92vh;
+    padding: 4vh 0.75vw;
+    background-color: var(--sidenav-bg-color);
+
+    .Brand::before{
+        content: '';
+        position: absolute;
+        top: 4vh;
+        height: 0.35vh;
+        width: 1.75vw;
+        background: var(--app-primary-color);
+        opacity: 0.8;
+    }
+
+    .Action{
+        font-weight: 600;
+        padding: 1vh 1vw;
+        border-radius: 0.5vh;
+        width: 14vw;
+        outline: none;
+        transition: background-color 0.35s ease-out;
+
+        &.Active{
+            background-color: var(--sidenav-link-active-bg-color);
+        }
+    }
+}

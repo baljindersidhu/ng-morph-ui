@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { NgMorphUiService } from './ng-morph-ui.service';
+import { NavigationService } from './navigation.service';
 
-describe('NgMorphUiService', () => {
-  let service: NgMorphUiService;
+describe('NavigationService', () => {
+  let service: NavigationService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(NgMorphUiService);
+    service = TestBed.inject(NavigationService);
   });
 
   it('should be created', () => {

@@ -1,1 +1,194 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+    margin: 0;
+    font-family: 'Titillium Web', sans-serif;
+
+    --app-primary-color: #2bc09e;
+    --morph-box-shadow: 2px 2px 11px -6px black, -2px -2px 11px -10px white;
+
+    --sidenav-bg-color: #f7f8f9;
+    --sidenav-link-active-bg-color: #e1e7ec;
+
+}
+
+.Row{
+    display: flex;
+    flex-direction: row;
+
+    &.Reverse{
+        flex-direction: row-reverse;
+    }
+
+    &.CenterV{
+        align-items: center;
+    }
+
+    &.CenterH{
+        justify-content: center;
+    }
+
+    .FillParent{
+        flex: 1;
+    }
+}
+
+
+.Column{
+    .Row;
+    flex-direction: column;
+
+    &.Reverse{
+        flex-direction: column-reverse;
+    }
+
+    &.CenterV{
+        .Row.CenterH;
+    }
+
+    &.CenterH{
+        .Row.CenterV;
+    }
+
+    .FillParent{
+        .Row.FillParent;
+    }
+}
+
+.Position{
+    &.Relative{
+        position: relative;
+    }
+
+    &.Absolute{
+        position: absolute;
+    }
+}
+
+.Text{
+    &.Center{
+        text-align: center;
+    }
+
+    &.Uppercase{
+        text-transform: uppercase;
+    }
+
+    &.Underline{
+        text-decoration: underline;
+    }
+
+    &.Bold{
+        font-weight: bold;
+    }
+}
+
+.Font{
+
+    &.Small{
+        &.x2{
+            font-size: 1.65vh;
+        }
+    }
+
+    &.x3{
+        font-size: 3vh;
+    }
+
+    &.x5{
+        font-size: 5vh;
+    }
+
+    &.x7{
+        font-size: 7vh;
+    }
+}
+
+.Margin{
+
+    &.Top30x{
+        margin-top: 30vh;
+    }
+
+    &.Top35x{
+        margin-top: 35vh;
+    }
+
+    &.Bottom2x{
+        margin-bottom: 2vh;
+    }
+
+    &.Bottom4x{
+        margin-bottom: 4vh;
+    }
+
+    &.Bottom5x{
+        margin-bottom: 5vh;
+    }
+
+    &.Bottom15x{
+        margin-bottom: 15vh;
+    }
+
+    &.Right2x{
+        margin-right: 2vw;
+    }
+}
+
+.Padding{
+    &.Left1x{
+        padding-left: 1vw;
+    }
+
+    &.Left6x{
+        padding-left: 6vw;
+    }
+
+    &.Left12x{
+        padding-left: 12vw;
+    }
+
+    &.Top12x{
+        padding-top: 12vh;
+    }
+}
+
+.Cursor{
+    &.Pointer{
+        cursor: pointer;
+    }
+}
+
+.Hover{
+    &:hover{
+        &.Underline{
+            .Text.Underline;
+        }
+    }
+}
+
+.Morph{
+    box-shadow: 2px 2px 11px -6px black, 
+        -2px -2px 11px -10px white, 
+        2px 2px 11px -6px black, 
+        -2px -2px 11px -10px white, 
+        2px 2px 11px -6px black, 
+        -2px -2px 11px -10px white;
+    &.Circle{
+        border-radius: 50%;
+    }
+
+    &.Square{
+        border-radius: 0.5vh;
+    }
+}
+
+.Overflow{
+    &.HiddenX{
+        overflow-x: hidden;
+    }
+
+    &.HiddenY{
+        overflow-y: hidden;
+    }
+}

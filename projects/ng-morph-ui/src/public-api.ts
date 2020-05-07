@@ -2,6 +2,5 @@
  * Public API Surface of ng-morph-ui
  */
 
-export * from './lib/ng-morph-ui.service';
-export * from './lib/ng-morph-ui.component';
-export * from './lib/ng-morph-ui.module';
+export * from './lib/components/foo/foo.module';
+export * from './lib/components/foo/foo.component';

@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/ng-morph-ui",
       "sourceRoot": "projects/ng-morph-ui/src",
-      "prefix": "lib",
+      "prefix": "ngmui",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -68,7 +68,8 @@
               "projects/ng-morph-ui-app/src/assets"
             ],
             "styles": [
-              "projects/ng-morph-ui-app/src/styles.less"
+              "projects/ng-morph-ui-app/src/styles.less",
+              "projects/ng-morph-ui-app/src/fonts.less"
             ],
             "scripts": []
           },
@@ -132,7 +133,8 @@
               "projects/ng-morph-ui-app/src/assets"
             ],
             "styles": [
-              "projects/ng-morph-ui-app/src/styles.less"
+              "projects/ng-morph-ui-app/src/styles.less",
+              "projects/ng-morph-ui-app/src/fonts.less"
             ],
             "scripts": []
           }

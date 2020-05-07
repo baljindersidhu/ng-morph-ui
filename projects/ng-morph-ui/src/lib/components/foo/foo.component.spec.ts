@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgMorphUiComponent } from './ng-morph-ui.component';
+import { FooComponent } from './foo.component';
 
-describe('NgMorphUiComponent', () => {
-  let component: NgMorphUiComponent;
-  let fixture: ComponentFixture<NgMorphUiComponent>;
+describe('FooComponent', () => {
+  let component: FooComponent;
+  let fixture: ComponentFixture<FooComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NgMorphUiComponent ]
+      declarations: [ FooComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgMorphUiComponent);
+    fixture = TestBed.createComponent(FooComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
