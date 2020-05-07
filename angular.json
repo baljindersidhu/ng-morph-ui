@@ -42,6 +42,127 @@
           }
         }
       }
+    },
+    "ng-morph-ui-app": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "less"
+        }
+      },
+      "root": "projects/ng-morph-ui-app",
+      "sourceRoot": "projects/ng-morph-ui-app/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ng-morph-ui-app",
+            "index": "projects/ng-morph-ui-app/src/index.html",
+            "main": "projects/ng-morph-ui-app/src/main.ts",
+            "polyfills": "projects/ng-morph-ui-app/src/polyfills.ts",
+            "tsConfig": "projects/ng-morph-ui-app/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/ng-morph-ui-app/src/favicon.ico",
+              "projects/ng-morph-ui-app/src/assets"
+            ],
+            "styles": [
+              "projects/ng-morph-ui-app/src/styles.less"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/ng-morph-ui-app/src/environments/environment.ts",
+                  "with": "projects/ng-morph-ui-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ng-morph-ui-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ng-morph-ui-app:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ng-morph-ui-app:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-morph-ui-app/src/test.ts",
+            "polyfills": "projects/ng-morph-ui-app/src/polyfills.ts",
+            "tsConfig": "projects/ng-morph-ui-app/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-morph-ui-app/karma.conf.js",
+            "assets": [
+              "projects/ng-morph-ui-app/src/favicon.ico",
+              "projects/ng-morph-ui-app/src/assets"
+            ],
+            "styles": [
+              "projects/ng-morph-ui-app/src/styles.less"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-morph-ui-app/tsconfig.app.json",
+              "projects/ng-morph-ui-app/tsconfig.spec.json",
+              "projects/ng-morph-ui-app/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/ng-morph-ui-app/e2e/protractor.conf.js",
+            "devServerTarget": "ng-morph-ui-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ng-morph-ui-app:serve:production"
+            }
+          }
+        }
+      }
     }},
   "defaultProject": "ng-morph-ui"
 }
